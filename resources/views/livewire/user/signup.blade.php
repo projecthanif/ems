@@ -1,5 +1,5 @@
 <div>
-    <main @style('margin-top:-130px')>
+    <main @style('margin-top:-200px')>
         <!-- ===== SignUp Form Start ===== -->
         <section class="i pg fh rm ki xn vq gj qp gr hj rp hr">
             {{--            <!-- Bg Shapes -->--}}
@@ -104,12 +104,14 @@
             </span>
                 </div>
 
-                <form class="sb" method="POST" wire.submit="store">
+                <form class="sb" method="POST" action="{{route('user.create')}}">
+                    @csrf
+                    @method('POST')
                     <div class="wb">
                         <label class="rc kk wm vb" for="fullname">Full name</label>
                         <input
                             type="text"
-                            name="fullname"
+                            name="name"
                             id="fullname"
                             placeholder="Devid Wonder"
                             class="vd hh rg zk _g ch hm dm fm pl/50 xi mi sm xm pm dn/40"
@@ -138,15 +140,14 @@
                         />
                     </div>
 
-                    <button class="vd rj ek rc rg gh lk ml il _l gi hi">
-                        Sign Up
-                    </button>
+                    <input type="submit" class="vd rj ek rc rg gh lk ml il _l gi hi">
 
-                    <p class="sj hk xj rj ob">
-                        Already have an account?
-                        <a class="mk" href="{{route('auth.login')}}"> Sign In </a>
-                    </p>
+
                 </form>
+                <p class="sj hk xj rj ob">
+                    Already have an account?
+                    <a class="mk" href="{{route('auth.login')}}"> Sign In </a>
+                </p>
             </div>
         </section>
         <!-- ===== SignUp Form End ===== -->

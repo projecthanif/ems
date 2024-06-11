@@ -8,12 +8,6 @@ use Livewire\Component;
 
 class Signup extends Component
 {
-
-
-    public function store(CreateUserRequest $request) {
-        dd($request);
-    }
-
     #[Layout('components.layouts.auth')]
     public function render()
     {
