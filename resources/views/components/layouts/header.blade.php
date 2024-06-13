@@ -21,16 +21,15 @@
                     <div class="avatar avatar-sm"><img src="{{ URL::to('admin/assets/img/logo-hotel.png')}} "
                                                        alt="User Image" class="avatar-img rounded-circle"></div>
                     <div class="user-text">
-                        <h6>Hotel XYZ</h6>
-                        <p class="text-muted mb-0">Administrator</p>
+                        <h6>{{auth()->user()->name}}</h6>
+                        <p class="text-muted mb-0">{{auth()->user()->role}}</p>
                     </div>
                 </div>
 
                 <a class="dropdown-item" href="">My Profile</a>
-                <form action="" method="POST">
-                    @csrf
+                <a href="{{route('auth.logout')}}">
                     <button type="submit" class="dropdown-item">Logout</button>
-                </form>
+                </a>
 
             </div>
         </li>

@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('role')->default('user');
+            $table->string('github_id')->nullable();
+            $table->string('google_id')->nullable();
         });
     }
 
@@ -22,7 +24,9 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('users');
+            $table->dropColumn('role');
+            $table->dropColumn('github_id');
+            $table->dropColumn('google_id');
         });
     }
 };
