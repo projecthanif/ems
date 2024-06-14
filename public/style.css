@@ -1528,10 +1528,10 @@ h1,  h2,  h3,  h4,  h5,  h6{
     padding-bottom: 6.25rem;
 }
 .gj{
-    padding-top: 8.75rem;
+    /*padding-top: 8.75rem;*/
 }
 .hj{
-    padding-bottom: 5rem;
+    /*padding-bottom: 5rem;*/
 }
 .ij{
     padding-top: 1.875rem;
@@ -2297,11 +2297,11 @@ h1,  h2,  h3,  h4,  h5,  h6{
     }
 
     .qp{
-        padding-top: 11.25rem;
+        padding-top: 1.25rem;
     }
 
     .rp{
-        padding-bottom: 6.25rem;
+        /*padding-bottom: 6.25rem;*/
     }
 
     .sp{
@@ -2490,11 +2490,11 @@ h1,  h2,  h3,  h4,  h5,  h6{
     }
 
     .gr{
-        padding-top: 12.5rem;
+        padding-top: 1.5rem;
     }
 
     .hr{
-        padding-bottom: 7.5rem;
+        /*padding-bottom: 7.5rem;*/
     }
 
     .ir{

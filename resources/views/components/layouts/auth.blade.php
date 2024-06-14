@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title></title>
     <link rel="icon" href="favicon.ico">
-    <link href="style.css" rel="stylesheet">
+    <link href="{{asset('style.css')}}" rel="stylesheet">
 </head>
+
+<body>
 
 {{$slot}}
 
-<script defer src="bundle.js"></script></body>
+<script defer src="{{asset('bundle.js')}}"></script>
+</body>
 </html>

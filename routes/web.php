@@ -12,12 +12,12 @@ Route::get('/', function () {
 
 
 Route::group(['middleware' => 'guest'], static function () {
-    Route::get('/login', Login::class)->name('auth.login');
-    Route::get('/signup', Signup::class)->name('auth.signup');
-    Route::post('/signup', [UserSignup::class, 'store'])->name('auth.signup.store');
-    Route::post('/login', [UserLogin::class, 'login'])->name('auth.login.store');
-    Route::get('/oauth/{provider}', [OAuth::class, 'redirectToProvider'])->name('auth.oauth');
-    Route::get('/oauth/{provider}/callback', [OAuth::class, 'handleProviderCallback']);
+    Route::get('/login', Login::class)->name('login');
+    Route::get('/signup', Signup::class)->name('signup');
+    Route::post('/signup', [UserSignup::class, 'store'])->name('signup.store');
+    Route::post('/login', [UserLogin::class, 'login'])->name('login.check');
+    Route::get('/auth/{provider}', [OAuth::class, 'redirectToProvider'])->name('oauth');
+    Route::get('/auth/{provider}/callback', [OAuth::class, 'handleProviderCallback']);
 });
 
 

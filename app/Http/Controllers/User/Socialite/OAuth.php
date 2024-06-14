@@ -33,21 +33,23 @@ class OAuth extends Controller
 
             return redirect(route('dashboard'))->with('message', 'account created');
         }
-//
-//        $user = User::updateOrCreate([
-//            [
-//                'google_id' => $providerUser->id,
-//            ], [
-//                'name' => $providerUser->name,
-//                'email' => $providerUser->email,
-//                'google_token' => $providerUser->token,
-//                'google_refresh_token' => $providerUser->refreshToken,
-//            ]
-//        ]);
-//
-//        Auth::login($user, true);
-//
-//        return route('dashboard')->with('message', 'account created');
+
+        if ($provider === 'google') {
+
+            $user = User::updateOrCreate([
+                'google_id' => $providerUser->id,
+            ], [
+                'name' => $providerUser->name,
+                'email' => $providerUser->email,
+                'google_token' => $providerUser->token,
+                'google_refresh_token' => $providerUser->refreshToken,
+            ]);
+
+            Auth::login($user, true);
+
+            return redirect(route('dashboard'))->with('message', 'account created');
+        }
+
 
         return null;
     }
