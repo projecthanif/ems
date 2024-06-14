@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\User\Socialite;
+namespace App\Http\Controllers\User\Oauth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;

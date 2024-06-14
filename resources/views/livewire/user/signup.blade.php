@@ -33,12 +33,12 @@
                     <div class="wb">
                         <label class="rc kk wm vb" for="fullname">Full name</label>
                         <input
-                            wire:model="name"
-                            type="text"
-                            name="name"
-                            id="fullname"
-                            placeholder="Devid Wonder"
-                            class="vd hh rg zk _g ch hm dm fm pl/50 xi mi sm xm pm dn/40"
+                                wire:model="name"
+                                type="text"
+                                name="name"
+                                id="fullname"
+                                placeholder="Devid Wonder"
+                                class="vd hh rg zk _g ch hm dm fm pl/50 xi mi sm xm pm dn/40"
                         />
                         @error(session('name'))
                         <p @style('color:red')>{{$message}}</p>
@@ -48,12 +48,12 @@
                     <div class="wb">
                         <label class="rc kk wm vb" for="email">Email</label>
                         <input
-                            wire:model="email"
-                            type="email"
-                            name="email"
-                            id="email"
-                            placeholder="example@gmail.com"
-                            class="vd hh rg zk _g ch hm dm fm pl/50 xi mi sm xm pm dn/40"
+                                wire:model="email"
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="example@gmail.com"
+                                class="vd hh rg zk _g ch hm dm fm pl/50 xi mi sm xm pm dn/40"
                         />
                         @error(session('email'))
                         <p @style('color:red')>{{$message}}</p>
@@ -63,21 +63,20 @@
                     <div class="wb">
                         <label class="rc kk wm vb" for="password">Password</label>
                         <input
-                            wire:model="password"
-                            type="password"
-                            name="password"
-                            id="password"
-                            placeholder="**************"
-                            class="vd hh rg zk _g ch hm dm fm pl/50 xi mi sm xm pm dn/40"
+                                wire:model="password"
+                                type="password"
+                                name="password"
+                                id="password"
+                                placeholder="**************"
+                                class="vd hh rg zk _g ch hm dm fm pl/50 xi mi sm xm pm dn/40"
                         />
                         @error(session('password'))
                         <p @style('color:red')>{{$message}}</p>
                         @enderror
                     </div>
 
-                    <input type="submit" class="vd rj ek rc rg gh lk ml il _l gi hi">
-
-
+                    <input type="submit" class="vd rj ek rc rg gh lk ml il _l gi hi" wire:loading.remove>
+                    @include('components.layouts.loader')
                 </form>
                 <p class="sj hk xj rj ob">
                     Already have an account?

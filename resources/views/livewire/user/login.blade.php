@@ -34,12 +34,12 @@
                     <div class="wb">
                         <label class="rc kk wm vb" for="email">Email</label>
                         <input
-                                wire:model="email"
-                                type="email"
-                                name="email"
-                                id="username"
-                                placeholder="example@gmail.com"
-                                class="vd hh rg zk _g ch hm dm fm pl/50 xi mi sm xm pm dn/40"
+                            wire:model="email"
+                            type="email"
+                            name="email"
+                            id="username"
+                            placeholder="example@gmail.com"
+                            class="vd hh rg zk _g ch hm dm fm pl/50 xi mi sm xm pm dn/40"
                         />
                         @error(session('email'))
                         <p @style('color:red')>{{$message}}</p>
@@ -49,18 +49,19 @@
                     <div class="wb">
                         <label class="rc kk wm vb" for="password">Password</label>
                         <input
-                                wire:model="password"
-                                type="password"
-                                name="password"
-                                id="password"
-                                placeholder="**************"
-                                class="vd hh rg zk _g ch hm dm fm pl/50 xi mi sm xm pm dn/40"
+                            wire:model="password"
+                            type="password"
+                            name="password"
+                            id="password"
+                            placeholder="**************"
+                            class="vd hh rg zk _g ch hm dm fm pl/50 xi mi sm xm pm dn/40"
                         />
                     </div>
 
-                    <button class="vd rj ek rc rg gh lk ml il _l gi hi">
+                    <button class="vd rj ek rc rg gh lk ml il _l gi hi" wire:loading.remove>
                         Sign In
                     </button>
+                    @include('components.layouts.loader')
 
                     <p class="sj hk xj rj ob">
                         Don't have an account?
@@ -73,3 +74,4 @@
     </main>
 
 </div>
+

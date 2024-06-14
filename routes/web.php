@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Livewire\User\{Login, Signup};
 use App\Http\Controllers\User\{Signup as UserSignup, Login as UserLogin};
-use App\Http\Controllers\User\Socialite\OAuth;
+use App\Http\Controllers\User\Oauth\OAuth;
 use App\Action\User\Logout;
 
 Route::get('/', function () {
