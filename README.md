@@ -7,7 +7,7 @@
 
 **Frontend:**
 - **Dynamic:** Livewire
-- **Styling:** Tailwind CSS or Bootstrap
+- **Styling:** Custom CSS & Bootstrap
 
 **OAuth:**
 - **Provider:** Github, Google

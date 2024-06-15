@@ -11,6 +11,7 @@
 <div class="main-wrapper">
     @include('components.layouts.header')
     @include('components.layouts.sidebar')
+
     {{$slot}}
 
 </div>
